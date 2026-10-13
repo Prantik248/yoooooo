@@ -6,10 +6,14 @@ filename = sys.argv[1]
 with open(filename, 'r') as f:
     lines = f.readlines()
 
-print("TOtal lines:", _______________)
-countss Counter()
+print("Total lines:", len(lines))
+counts = Counter()
 for line in lines:
     fields = line.split()
-    if lrn(fields) > ___:
-        key = fields[___]
-        counts   
+    if len(fields) > 1 :
+        key = fields[0]
+        counts[key] += 1
+
+print("Top 5:")
+for key, value in counts.most_common(5):
+    print(key, value)
